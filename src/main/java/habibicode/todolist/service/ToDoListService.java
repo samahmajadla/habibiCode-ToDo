@@ -56,4 +56,9 @@ public class ToDoListService {
     }
 
 
+    public List<ToDoList> getAllLists() {
+        List<ToDoList> allLists = new ArrayList<>();
+        this.toDoListRepository.findAll().forEach(allLists::add);
+        return allLists;
+    }
 }

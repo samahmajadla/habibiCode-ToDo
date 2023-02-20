@@ -38,6 +38,11 @@ public class ToDoListController {
         return ResponseEntity.ok(this.toDoListService.getListsByTitle(title));
     }
 
+    @GetMapping("/lists/all")
+    public ResponseEntity getAllLists() {
+        return ResponseEntity.ok(this.toDoListService.getAllLists());
+    }
+
     @DeleteMapping("/list")
     public ResponseEntity deleteList(@RequestParam Long id){
 
